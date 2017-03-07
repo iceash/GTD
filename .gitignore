@@ -43,4 +43,5 @@ Temporary Items
 .apdisk
 
 ./gtd/Runtime/*
+./gtd/Runtime/
 *.log
