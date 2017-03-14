@@ -30,3 +30,10 @@
 .colorsBox>div:first-child{padding-right:45px;}
 .colorsBox>div .box{display:block;width:25px;height:18px;float:left;background:#fdab01;margin-top:3px;margin-right:20px;}
 .colorsBox>div .box.blue{background:#63b7fd;}
+
+.dateGroup{
+	width: 100%;margin-top: 20px;
+}
+.dateGroup input{
+	width: 150px;display: inline-block;width: 180px;
+}

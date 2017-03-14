@@ -8,7 +8,13 @@
         <label for="inputContent" class="sr-only">项目概述</label>
         <textarea type="text" name="content" id="inputContent" class="form-control" placeholder="项目概述" required></textarea>
         <label for="inputPeriod" class="sr-only">时长</label>
-        <input type="period" id="inputPeriod" class="form-control" placeholder="时长" required autofocus="">
+        <input type="text" name="period" id="inputPeriod" class="form-control" placeholder="时长" required autofocus="">
+        <label for="inputDate1" class="sr-only">时长</label>
+        <div class="dateGroup">
+            <input type="text" name="date1" id="inputDate1" class="form-control" placeholder="YYYY-MM-DD" required autofocus=""  onClick="WdatePicker()">
+            <span> —— </span>
+            <input type="text" name="date2" id="inputDate2" class="form-control" placeholder="YYYY-MM-DD" required autofocus=""  onClick="WdatePicker()">
+        </div>
         <p></p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">新建</button>
       </form>
@@ -17,4 +23,5 @@
 
 
 
+<script type="text/javascript" src="__PUBLIC__/js/DatePicker/WdatePicker.js"></script>
 <include file="./gtd/Tpl/Public/foot.html" />

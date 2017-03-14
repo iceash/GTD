@@ -48,3 +48,6 @@ body {
 .form-signin .btn{
   width: 200px;
 }
+.form-signin .btn-newplan{
+  width: 180px;display: inline-block;
+}

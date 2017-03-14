@@ -1,0 +1,32 @@
+<include file="./gtd/Tpl/Public/head.html" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+<link href="__PUBLIC__/css/signin.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<div class="container">
+
+      <form class="form-signin" method="POST" action="__URL__/add_plan_post">
+        <h2 class="form-signin-heading">新建年计划</h2>
+        <label for="inputContent" class="sr-only">本年计划</label>
+        <textarea type="text" name="content" id="inputContent" class="form-control" placeholder="本月计划" required></textarea>
+        <label for="inputPeriod" class="sr-only">年份</label>
+        <input type="text" name="period" id="inputPeriod" class="form-control" placeholder="月份" required autofocus=""  onClick="WdatePicker({dateFmt:'yyyy'})">
+        <label for="inputPeriod" class="sr-only">进度</label>
+        <!-- <input type="text" name="description" id="inputPeriod" class="form-control" placeholder="进度" required autofocus=""  onClick="WdatePicker()"> -->
+        <select id="usertype" name="usertype" class="selectpicker show-tick form-control" data-live-search="false">
+                <option value="0">开始0%</option>
+                <option value="1">进行中20%</option>
+                <option value="2">进行中40%</option>
+                <option value="3">进行中60%</option>
+                <option value="4">进行中80%</option>
+                <option value="5">完成100%</option>
+        </select>
+        <p></p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">新建</button>
+      </form>
+
+    </div>
+
+
+
+<script type="text/javascript" src="__PUBLIC__/js/DatePicker/WdatePicker.js"></script>
+<include file="./gtd/Tpl/Public/foot.html" />

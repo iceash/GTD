@@ -39,7 +39,7 @@ class IndexAction extends Action {
         $this->show();
     }
     public function add_project(){
-        // 新建材料
+        // 新建项目
         $active[2] = "active";
         $this->assign("active",$active);
         $this->show();
@@ -48,7 +48,7 @@ class IndexAction extends Action {
         $this->redirect('Index/project');
     }
     public function change_project(){
-        // 修改材料
+        // 修改项目
         $active[2] = "active";
         $this->assign("active",$active);
         $this->show();
@@ -70,6 +70,33 @@ class IndexAction extends Action {
     public function reference(){
         // 参考资料
         $active[4] = "active";
+        $this->assign("active",$active);
+        $this->show();
+    }
+    public function add_day_plan(){
+        // 生成日程
+        $active[2] = "active";
+        $this->assign("active",$active);
+        $this->show();
+    }
+    public function add_plan_post(){
+        $this->redirect('Index/project');
+    }
+    public function add_week_plan(){
+        // 生成周计划
+        $active[2] = "active";
+        $this->assign("active",$active);
+        $this->show();
+    }
+    public function add_month_plan(){
+        // 生成月计划
+        $active[2] = "active";
+        $this->assign("active",$active);
+        $this->show();
+    }
+    public function add_year_plan(){
+        // 生成年计划
+        $active[2] = "active";
         $this->assign("active",$active);
         $this->show();
     }
