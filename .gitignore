@@ -45,3 +45,4 @@ Temporary Items
 gtd/Runtime/*
 gtd/Runtime/
 *.log
+config.php
