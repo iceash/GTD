@@ -46,3 +46,4 @@ gtd/Runtime/*
 gtd/Runtime/
 *.log
 config.php
+gtd/Conf/config.php

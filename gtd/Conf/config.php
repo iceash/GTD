@@ -11,5 +11,6 @@ return array(
     'DB_NAME'=>'gtd',
     'DB_USER'=>'root',
     'DB_PWD'=>'',
+    
 );
 ?>
