@@ -16,58 +16,22 @@
                 </tr>
               </thead>
               <tbody>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td>
-                    <a href="__URL__/add_day_plan">日程</a> || <a href="__URL__/add_week_plan">周计划</a> || <a href="__URL__/add_month_plan">月计划</a> || <a href="__URL__/add_year_plan">年计划</a>
-                  </td>
-                  <td>
-                    <a href="__URL__/change_project">详情</a>
-                  </td>
-                  <td>
-                     <a href="#">删除</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td>
-                    <a href="__URL__/add_day_plan">日程</a> || <a href="__URL__/add_week_plan">周计划</a> || <a href="__URL__/add_month_plan">月计划</a> || <a href="__URL__/add_year_plan">年计划</a>
-                  </td>
-                  <td>
-                    <a href="__URL__/change_project">详情</a>
-                  </td>
-                  <td>
-                     <a href="#">删除</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td>
-                    <a href="__URL__/add_day_plan">日程</a> || <a href="__URL__/add_week_plan">周计划</a> || <a href="__URL__/add_month_plan">月计划</a> || <a href="__URL__/add_year_plan">年计划</a>
-                  </td>
-                  <td>
-                    <a href="__URL__/change_project">详情</a>
-                  </td>
-                  <td>
-                     <a href="#">删除</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td>
-                    <a href="__URL__/add_day_plan">日程</a> || <a href="__URL__/add_week_plan">周计划</a> || <a href="__URL__/add_month_plan">月计划</a> || <a href="__URL__/add_year_plan">年计划</a>
-                  </td>
-                  <td>
-                    <a href="__URL__/change_project">详情</a>
-                  </td>
-                  <td>
-                     <a href="#">删除</a>
-                  </td>
+                <foreach name="projects" item="pro">
+                  <tr>
+                    <td>{$pro.id}</td>
+                    <td>{$pro.content}</td>
+                    <td>
+                      <a href="__URL__/add_day_plan?project_id={$pro.id}">日程</a> || <a href="__URL__/add_week_plan?project_id={$pro.id}">周计划</a> || <a href="__URL__/add_month_plan?project_id={$pro.id}">月计划</a> || <a href="__URL__/add_year_plan?project_id={$pro.id}">年计划</a>
+                    </td>
+                    <td>
+                      <a href="__URL__/change_project?id={$pro.id}">详情</a>
+                    </td>
+                    <td>
+                       <a href="__URL__/delete_project?id={$pro.id}">删除</a>
+                    </td>
+                  </tr>
+                </foreach>
+
               </tbody>
             </table>
           </div>

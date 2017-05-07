@@ -1,0 +1,34 @@
+<include file="./gtd/Tpl/Public/head.html" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+<link href="__PUBLIC__/css/signin.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<div class="container">
+
+      <form class="form-signin" method="POST" action="__URL__/change_plan_post">
+        <input type="hidden" value="{$plan.project_id}" name="project_id">
+        <input type="hidden" value="{$plan.id}" name="id">
+        <input type="hidden" value="week" name="plan_type">
+        <h2 class="form-signin-heading">修改周计划</h2>
+        <label for="inputContent" class="sr-only">本周计划</label>
+        <textarea type="text" name="content" id="inputContent" class="form-control" placeholder="本周计划" required>{$plan.content}</textarea>
+        <label for="inputPeriod" class="sr-only">开始日期</label>
+        <input type="text" name="start_time" id="inputPeriod" class="form-control" placeholder="开始日期" required autofocus=""  onClick="WdatePicker({isShowWeek:true})" value="{$plan.start_time}">
+        <label for="inputPeriod" class="sr-only">进度</label>
+        <select id="rate" name="rate" class="selectpicker show-tick form-control" data-live-search="false">
+                <option value="0" <?php if($plan["rate"] == 0) echo "selected='selected'"; ?> >开始0%</option>
+                <option value="20" <?php if($plan["rate"] == 20) echo "selected='selected'"; ?> >进行中20%</option>
+                <option value="40" <?php if($plan["rate"] == 40) echo "selected='selected'"; ?> >进行中40%</option>
+                <option value="60" <?php if($plan["rate"] == 60) echo "selected='selected'"; ?> >进行中60%</option>
+                <option value="80" <?php if($plan["rate"] == 80) echo "selected='selected'"; ?> >进行中80%</option>
+                <option value="100" <?php if($plan["rate"] == 100) echo "selected='selected'"; ?> >完成100%</option>
+        </select>
+        <p></p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">修改</button>
+      </form>
+
+    </div>
+
+
+
+<script type="text/javascript" src="__PUBLIC__/js/DatePicker/WdatePicker.js"></script>
+<include file="./gtd/Tpl/Public/foot.html" />

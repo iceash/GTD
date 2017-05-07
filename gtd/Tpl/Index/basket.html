@@ -16,39 +16,19 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td><a href="__URL__/add_project">生成项目</a></td>
-                  <td>
-                  	<a href="__URL__/add_reference">参考资料</a> || <a href="__URL__/add_memo">备忘录</a>
-                  </td>
-                  <td>
-                  	<a href="#">修改</a> || <a href="#">删除</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td><a href="__URL__/add_project">生成项目</a></td>
-                  <td>
-                  	<a href="__URL__/add_reference">参考资料</a> || <a href="__URL__/add_memo">备忘录</a>
-                  </td>
-                  <td>
-                  	<a href="#">修改</a> || <a href="#">删除</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1,001</td>
-                  <td>这是一个测试材料的材料内容内容内容内容</td>
-                  <td><a href="__URL__/add_project">生成项目</a></td>
-                  <td>
-                  	<a href="__URL__/add_reference">参考资料</a> || <a href="__URL__/add_memo">备忘录</a>
-                  </td>
-                  <td>
-                  	<a href="#">修改</a> || <a href="#">删除</a>
-                  </td>
-                </tr>
+                <foreach name="materials" item="ma">
+                  <tr>
+                    <td>{$ma.id}</td>
+                    <td>{$ma.content}</td>
+                    <td><a href="__URL__/add_project?id={$ma.id}">生成项目</a></td>
+                    <td>
+                      <a href="__URL__/add_reference?id={$ma.id}">参考资料</a> || <a href="__URL__/add_memo?id={$ma.id}">备忘录</a>
+                    </td>
+                    <td>
+                      <a href="__URL__/change_material?id={$ma.id}&redirect=basket">修改</a> || <a href="__URL__/delete_material_post?id={$ma.id}&redirect=basket">删除</a>
+                    </td>
+                  </tr>
+                </foreach>
               </tbody>
             </table>
           </div>

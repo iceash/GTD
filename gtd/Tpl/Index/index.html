@@ -19,6 +19,15 @@
 	.list-group-item{
 		border: initial;padding: 10px;
 	}
+	ul{
+		padding-left: 18px;
+	}
+	li{
+		text-align: left;
+	}
+	.col-md-6,.row,.col-md-3{
+		height: 100%;
+	}
 	/* .material:after{
 		content: "";
 		display: block;
@@ -35,81 +44,69 @@
 				<div class="col-md-3">
 					<span class="label label-default label-primary">工作篮</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+		              	<foreach name="basket" item="va">
+				            <a href="__URL__/change_material?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>{$va.content}</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3">
 					<span class="label label-default label-primary">项目</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="project" item="va">
+				            <a href="__URL__/change_project?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>{$va.content}</li>
+				              		<li>{$va.date1}</li>
+				              		<li>{$va.period}</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3">
 					<span class="label label-default label-primary">年计划</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="year_plan" item="va">
+				            <a href="__URL__/change_year_plan?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>项目编号：{$va.project_id}</li>
+				              		<li>{$va.content}</li>
+				              		<li>{$va.start_time}</li>
+				              		<li>{$va.rate}%</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3">
 					<span class="label label-default label-primary">月计划</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="month_plan" item="va">
+				            <a href="__URL__/change_month_plan?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>项目编号：{$va.project_id}</li>
+				              		<li>{$va.content}</li>
+				              		<li>{$va.start_time}</li>
+				              		<li>{$va.rate}%</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 			</div>
@@ -119,83 +116,76 @@
 				<div class="col-md-3">
 					<span class="label label-default label-primary">周计划</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="week_plan" item="va">
+				            <a href="__URL__/change_week_plan?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>项目编号：{$va.project_id}</li>
+				              		<li>{$va.content}</li>
+				              		<li>{$va.start_time}</li>
+				              		<li>{$va.rate}%</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3">
 					<span class="label label-default label-primary">日程</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="day_plan" item="va">
+				            <a href="__URL__/change_day_plan?id={$va.id}&redirect=basket" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>项目编号：{$va.project_id}</li>
+				              		<li>{$va.content}</li>
+				              		<li>{$va.start_time}</li>
+				              		<li>{$va.rate}%</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3">
 					<span class="label label-default label-primary">备忘录</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="basket" item="va">
+				            <a href="__URL__/change_material?id={$va.id}&redirect=memo" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>{$va.content}</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 				<div class="col-md-3" style="border:initial">
 					<span class="label label-default label-primary">参考资料</span>
 					  <div class="list-group">
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
-			            <a href="#" class="list-group-item">
-			              <div class="material">
-			              	材料
-			              </div>
-			            </a>
+			            <foreach name="basket" item="va">
+				            <a href="__URL__/change_material?id={$va.id}&redirect=reference" class="list-group-item">
+				              <div class="material">
+				              	<ul>
+				              		<li>编号：{$va.id}</li>
+				              		<li>{$va.content}</li>
+				              	</ul>
+				              </div>
+				            </a>
+			        	</foreach>
 			          </div>
 				</div>
 			</div>
 		</div>
 	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	var height = $(".row-outer").height();
+	$(".row-outer").height(height);
+});	
+
+</script>

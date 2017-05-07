@@ -1,0 +1,20 @@
+<include file="./gtd/Tpl/Public/head.html" />
+<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+<link href="__PUBLIC__/css/signin.css" rel="stylesheet">
+<div class="container">
+
+      <form class="form-signin" method="POST" action="__URL__/change_material_post">
+      	<input type="hidden" value="{$material.id}" name="id">
+      	<input type="hidden" value="{$redirect}" name="redirect">
+        <h2 class="form-signin-heading">修改材料</h2>
+        <label for="inputContent" class="sr-only">材料概述</label>
+        <textarea type="text" name="content" id="inputContent" class="form-control" placeholder="材料概述" required>{$material.content}</textarea>
+        <p></p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">修改</button>
+      </form>
+
+    </div>
+
+
+
+<include file="./gtd/Tpl/Public/foot.html" />
