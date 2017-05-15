@@ -12,10 +12,8 @@ class IndexAction extends Action {
                 case 1:
                     break;
                 case 2:
-                    $reference[] = $ma;
-                    break;
                 case 3:
-                    $memo[] = $ma;
+                    $reference_memo[] = $ma;
                     break;
                 default:
                     break;
@@ -32,23 +30,19 @@ class IndexAction extends Action {
                     $week_plan[] = $pl;
                     break;
                 case 'month':
-                    $month_plan[] = $pl;
-                    break;
                 case 'year':
-                    $year_plan[] = $pl;
+                    $month_year_plan[] = $pl;
                     break;
                 default:
                     break;
             }
         }
         $arr["basket"] = $basket;
-        $arr["reference"] = $reference;
-        $arr["memo"] = $memo;
+        $arr["reference_memo"] = $reference_memo;
         $arr["project"] = $all_project;
         $arr["day_plan"] = $day_plan;
         $arr["week_plan"] = $week_plan;
-        $arr["month_plan"] = $month_plan;
-        $arr["year_plan"] = $year_plan;
+        $arr["month_year_plan"] = $month_year_plan;
         $this->assign($arr);
 		$this->show();
     }
@@ -273,7 +267,7 @@ class IndexAction extends Action {
         }
         $id=$_POST["id"];
         M("plan")->where("id=$id")->save($data);
-        $this->redirect('Index/calendar');
+        $this->redirect('Index/index');
 
     }
 }

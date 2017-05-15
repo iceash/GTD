@@ -22,6 +22,12 @@
                 <option value="80" <?php if($plan["rate"] == 80) echo "selected='selected'"; ?> >进行中80%</option>
                 <option value="100" <?php if($plan["rate"] == 100) echo "selected='selected'"; ?> >完成100%</option>
         </select>
+        <select id="urgency" name="urgency" class="selectpicker show-tick form-control" data-live-search="false">
+                <option value="十分紧急" <?php if ($plan["urgency"] == "十分紧急") echo "selected='selected'"; ?> >十分紧急</option>
+                <option value="紧急" <?php if ($plan["urgency"] == "紧急") echo "selected='selected'"; ?> >紧急</option>
+                <option value="一般" <?php if ($plan["urgency"] == "一般") echo "selected='selected'"; ?> >一般</option>
+                <option value="延后" <?php if ($plan["urgency"] == "延后") echo "selected='selected'"; ?> >延后</option>
+        </select>
         <p></p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">修改</button>
       </form>
