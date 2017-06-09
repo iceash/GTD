@@ -133,12 +133,18 @@ $(function(){
 		 // 操作月计划
 		 var json_month_plans = '<?php echo json_encode($month_plans); ?>';
 		 var month_plans = eval('('+json_month_plans+')');
+		 console.log(month_plans);
 		 function thismonthplan(year_month){
 		 	var contents = "";
+		 	var num = 1;
 		 	for (var i = 0; i < month_plans.length; i++) {
 		 		var this_month_plan = month_plans[i];
+		 		var tmp = this_month_plan["start_time"].split("-");
+		 		this_month_plan["start_time"] = parseInt(tmp[0]) + "-" + parseInt(tmp[1]);
+		 		console.log(this_month_plan["start_time"]);
 		 		if (this_month_plan["start_time"] == year_month) {
-		 			contents += "<p><a href='__URL__/change_month_plan?id="+this_month_plan["id"]+"&redirect=basket' class='detail'>"+(i+1)+"、"+this_month_plan["content"]+"</a></p>";
+		 			contents += "<p><a href='__URL__/change_month_plan?id="+this_month_plan["id"]+"&redirect=basket' class='detail'>"+(num)+"、"+this_month_plan["content"]+"</a></p>";
+		 			num++;
 		 		}; 
 		 	};
 		 	$("#month_plan").html(contents);
